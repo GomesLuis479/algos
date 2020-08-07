@@ -2,7 +2,7 @@ from typing import List
 from random import randint
 
 
-def find_pair(data: List[int], target: int) -> (int, int):
+def find_pair(data: List[int], target: int) -> bool:
     data.sort()
 
     # find element less than target

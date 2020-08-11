@@ -20,7 +20,7 @@ def max_sub(data: List[int]) -> Tuple[List[int], int, int]:
     max_end_index = 0
 
     for i in range(1, len(data)):
-        check = data[i-1] + data[i]
+        check = end_sums[i-1] + data[i]
 
         if check > data[i]:
             end_sums.append(check)
@@ -42,7 +42,7 @@ def max_sub(data: List[int]) -> Tuple[List[int], int, int]:
     return data[max_start_index: max_end_index+1], max_start_index, max_end_index, max_sum
 
 
-data = [-4, 5, -4, 5, 3, -6, 9, 3, 1]
+data = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 result = max_sub(data)
 
 print('input', data)
